@@ -1,0 +1,910 @@
+Started GET "/" for ::1 at 2024-02-27 18:37:33 +0900
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.7ms | Allocations: 376)
+Completed 200 OK in 478ms (Views: 113.9ms | ActiveRecord: 0.0ms | Allocations: 8820)
+
+
+Started GET "/" for ::1 at 2024-02-27 18:39:28 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 376)
+Completed 200 OK in 25ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 4863)
+
+
+Started GET "/" for ::1 at 2024-02-27 21:26:17 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.4ms | Allocations: 376)
+Completed 200 OK in 409ms (Views: 101.2ms | ActiveRecord: 0.0ms | Allocations: 4871)
+
+
+Started GET "/posts" for ::1 at 2024-02-27 21:26:26 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 785.8ms | Allocations: 81404)
+Completed 500 Internal Server Error in 807ms (ActiveRecord: 0.0ms | Allocations: 82344)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_file_s_rename - (C:/Users/kacoa/dev/ruby/test_1/tmp/cache/assets/sprockets/v4.0.0/iN/iNrlIEebrkFIEMKCHwchdqhuHjL7XibsB6Vg6c-i6qU.cache.21760.12508.882680, C:/Users/kacoa/dev/ruby/test_1/tmp/cache/assets/sprockets/v4.0.0/iN/iNrlIEebrkFIEMKCHwchdqhuHjL7XibsB6Vg6c-i6qU.cache)):
+  
+sprockets (4.2.1) lib/sprockets/path_utils.rb:362:in `rename'
+sprockets (4.2.1) lib/sprockets/path_utils.rb:362:in `atomic_write'
+sprockets (4.2.1) lib/sprockets/cache/file_store.rb:112:in `set'
+sprockets (4.2.1) lib/sprockets/cache.rb:227:in `set'
+sprockets (4.2.1) lib/sprockets/cache.rb:143:in `set'
+sprockets (4.2.1) lib/sprockets/loader.rb:265:in `store_asset'
+sprockets (4.2.1) lib/sprockets/loader.rb:228:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/context.rb:117:in `load'
+sprockets (4.2.1) lib/sprockets/context.rb:145:in `depend_on_asset'
+sprockets (4.2.1) lib/sprockets/context.rb:185:in `link_asset'
+sprockets-rails (3.4.2) lib/sprockets/rails/context.rb:27:in `compute_asset_path'
+actionview (7.1.3.2) lib/action_view/helpers/asset_url_helper.rb:204:in `asset_path'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:41:in `sourcemap_asset_path'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:34:in `resolved_sourcemap_comment'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:15:in `block in call'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:11:in `gsub'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:11:in `call'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.1) lib/sprockets/loader.rb:184:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/bundle.rb:27:in `call'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.1) lib/sprockets/loader.rb:184:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.1) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:359:in `run_task'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:350:in `block (3 levels) in create_worker'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `loop'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `block (2 levels) in create_worker'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `catch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `block in create_worker'
+Started GET "/" for 127.0.0.1 at 2024-02-27 21:31:46 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 376)
+Completed 200 OK in 81ms (Views: 21.6ms | ActiveRecord: 0.0ms | Allocations: 8822)
+
+
+Started GET "/posts" for 127.0.0.1 at 2024-02-27 21:31:55 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 426.5ms | Allocations: 81883)
+Completed 500 Internal Server Error in 459ms (ActiveRecord: 0.0ms | Allocations: 82823)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_file_s_rename - (C:/Users/kacoa/dev/ruby/test_1/tmp/cache/assets/sprockets/v4.0.0/Tu/TuBs9yRDxQQx8sBE38LjuXIAwLRef0OwaXKPzpxAk5o.cache.21820.8008.604642, C:/Users/kacoa/dev/ruby/test_1/tmp/cache/assets/sprockets/v4.0.0/Tu/TuBs9yRDxQQx8sBE38LjuXIAwLRef0OwaXKPzpxAk5o.cache)):
+  
+sprockets (4.2.1) lib/sprockets/path_utils.rb:362:in `rename'
+sprockets (4.2.1) lib/sprockets/path_utils.rb:362:in `atomic_write'
+sprockets (4.2.1) lib/sprockets/cache/file_store.rb:112:in `set'
+sprockets (4.2.1) lib/sprockets/cache.rb:227:in `set'
+sprockets (4.2.1) lib/sprockets/cache.rb:93:in `fetch'
+sprockets (4.2.1) lib/sprockets/base.rb:71:in `file_digest'
+sprockets (4.2.1) lib/sprockets.rb:213:in `block in <module:Sprockets>'
+sprockets (4.2.1) lib/sprockets/dependencies.rb:68:in `resolve_dependency'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:54:in `block in resolve_dependency'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:54:in `resolve_dependency'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `block in resolve_dependencies'
+C:/Ruby32-x64/lib/ruby/3.2.0/set.rb:511:in `each_key'
+C:/Ruby32-x64/lib/ruby/3.2.0/set.rb:511:in `each'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `map'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `resolve_dependencies'
+sprockets (4.2.1) lib/sprockets/loader.rb:222:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/bundle.rb:27:in `call'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.1) lib/sprockets/loader.rb:184:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.1) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:359:in `run_task'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:350:in `block (3 levels) in create_worker'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `loop'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `block (2 levels) in create_worker'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `catch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `block in create_worker'
+Started GET "/" for ::1 at 2024-02-27 21:54:11 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 376)
+Completed 200 OK in 31ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 4864)
+
+
+Started GET "/posts" for ::1 at 2024-02-27 21:54:18 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 374.2ms | Allocations: 40333)
+Completed 200 OK in 389ms (Views: 383.7ms | ActiveRecord: 0.0ms | Allocations: 41280)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (7.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (2.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-02-27 13:25:19.116537', '2024-02-27 13:25:19.116541') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20240227132425)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240227132425') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/posts/new" for ::1 at 2024-02-27 22:30:32 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/posts/new"):
+  
+Started GET "/" for ::1 at 2024-02-27 22:32:31 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | Allocations: 376)
+Completed 200 OK in 24ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 4864)
+
+
+Started GET "/posts" for ::1 at 2024-02-27 22:32:38 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 104.8ms | Allocations: 35980)
+Completed 200 OK in 272ms (Views: 110.1ms | ActiveRecord: 0.0ms | Allocations: 46727)
+
+
+Started GET "/posts/new" for ::1 at 2024-02-27 22:32:47 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/new"):
+  
+Started GET "/posts/new" for ::1 at 2024-02-27 22:37:35 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 98)
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 15198)
+Completed 200 OK in 103ms (Views: 45.6ms | ActiveRecord: 2.7ms | Allocations: 26122)
+
+
+Started GET "/posts/new" for ::1 at 2024-02-27 22:54:06 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 636)
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 15337)
+Completed 200 OK in 68ms (Views: 43.4ms | ActiveRecord: 0.0ms | Allocations: 18967)
+
+
+Started GET "/posts/new" for ::1 at 2024-02-27 23:20:01 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 53.5ms | Allocations: 2339)
+  Rendered layout layouts/application.html.erb (Duration: 55.6ms | Allocations: 2425)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 0.0ms | Allocations: 6026)
+
+
+  
+ActionView::Template::Error (undefined method `text_fiels' for #<ActionView::Helpers::FormBuilder:0x00000131aa370460 @nested_child_index={}, @options={:allow_method_names_outside_object=>true, :skip_default_ids=>false}, @template=#<ActionView::Base:0x00000000014a78>, @object=#<Post id: nil, title: nil, content: nil, created_at: nil, updated_at: nil>, @object_name="post", @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>true}, @default_html_options={}, @multipart=nil, @index=nil>):
+    2: 
+    3: <%= form_with model: @posts do |form| %>
+    4:     <%= form.label :title %>
+    5:     <%= form.text_fiels :title %>
+    6: <% end %>
+    7: 
+  
+app/views/posts/new.html.erb:5
+app/views/posts/new.html.erb:3
+Started GET "/posts/new" for ::1 at 2024-02-27 23:20:15 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1469)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1555)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 4.8ms | Allocations: 5858)
+
+
+  
+ActionView::Template::Error (undefined method `text_fields' for #<ActionView::Helpers::FormBuilder:0x00000131ab36c4e0 @nested_child_index={}, @options={:allow_method_names_outside_object=>true, :skip_default_ids=>false}, @template=#<ActionView::Base:0x000000000180d8>, @object=#<Post id: nil, title: nil, content: nil, created_at: nil, updated_at: nil>, @object_name="post", @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>true}, @default_html_options={}, @multipart=nil, @index=nil>):
+    2: 
+    3: <%= form_with model: @posts do |form| %>
+    4:     <%= form.label :title %>
+    5:     <%= form.text_fields :title %>
+    6: <% end %>
+    7: 
+  
+app/views/posts/new.html.erb:5
+app/views/posts/new.html.erb:3
+Started GET "/posts/new" for ::1 at 2024-02-27 23:20:38 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 793)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 15688)
+Completed 200 OK in 47ms (Views: 32.0ms | ActiveRecord: 2.5ms | Allocations: 20000)
+
+
+Started GET "/posts/new" for ::1 at 2024-02-27 23:22:12 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1261)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 15958)
+Completed 200 OK in 43ms (Views: 33.6ms | ActiveRecord: 2.7ms | Allocations: 20276)
+
+
+Started GET "/posts/new" for ::1 at 2024-02-27 23:22:46 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1207)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 16082)
+Completed 200 OK in 51ms (Views: 36.6ms | ActiveRecord: 4.0ms | Allocations: 20355)
+
+
+Started GET "/posts/new" for ::1 at 2024-02-27 23:22:58 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1025)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 15751)
+Completed 200 OK in 64ms (Views: 35.5ms | ActiveRecord: 4.9ms | Allocations: 20001)
+
+
+Started GET "/posts/new" for ::1 at 2024-02-27 23:30:07 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1040)
+  Rendered layout layouts/application.html.erb (Duration: 67.2ms | Allocations: 18407)
+Completed 200 OK in 79ms (Views: 71.9ms | ActiveRecord: 0.0ms | Allocations: 22073)
+
+
+Started GET "/posts/new" for ::1 at 2024-02-27 23:31:18 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1035)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 15857)
+Completed 200 OK in 49ms (Views: 26.2ms | ActiveRecord: 2.3ms | Allocations: 20134)
+
+
+Started GET "/posts/new" for ::1 at 2024-02-27 23:31:54 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1046)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 15868)
+Completed 200 OK in 55ms (Views: 34.8ms | ActiveRecord: 3.1ms | Allocations: 20143)
+
+
+Started POST "/posts" for ::1 at 2024-02-27 23:38:18 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/posts"):
+  
+Started GET "/posts/new" for ::1 at 2024-02-27 23:38:19 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1052)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 15874)
+Completed 200 OK in 40ms (Views: 31.9ms | ActiveRecord: 0.0ms | Allocations: 19504)
+
+
+Started POST "/posts" for ::1 at 2024-02-27 23:39:29 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/posts"):
+  
+Started GET "/posts/new" for ::1 at 2024-02-27 23:39:29 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 657)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 1757)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 2036)
+
+
+Started POST "/posts" for ::1 at 2024-02-27 23:41:49 +0900
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"test", "content"=>"test"}, "commit"=>"投稿"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:13:in `create'
+  [1m[36mPost Create (4.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "test"], ["content", "test"], ["created_at", "2024-02-27 14:41:49.450573"], ["updated_at", "2024-02-27 14:41:49.450573"]]
+  ↳ app/controllers/posts_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:13:in `create'
+Redirected to http://[::1]:3000/posts
+Completed 302 Found in 50ms (ActiveRecord: 16.7ms | Allocations: 6614)
+
+
+Started GET "/posts" for ::1 at 2024-02-27 23:41:49 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 42.1ms | Allocations: 15119)
+Completed 200 OK in 57ms (Views: 51.7ms | ActiveRecord: 0.0ms | Allocations: 16088)
+
+
+Started GET "/posts" for ::1 at 2024-02-27 23:43:54 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 3517)
+  Rendered layout layouts/application.html.erb (Duration: 36.1ms | Allocations: 18389)
+Completed 200 OK in 49ms (Views: 39.4ms | ActiveRecord: 3.3ms | Allocations: 19918)
+
+
+Started GET "/posts" for ::1 at 2024-02-27 23:44:19 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 3465)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 18383)
+Completed 200 OK in 33ms (Views: 25.2ms | ActiveRecord: 2.2ms | Allocations: 19917)
+
+
+Started GET "/posts" for ::1 at 2024-02-27 23:44:59 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3475)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 18505)
+Completed 200 OK in 34ms (Views: 26.2ms | ActiveRecord: 2.8ms | Allocations: 20039)
+
+
+Started GET "/posts/new" for ::1 at 2024-02-27 23:45:24 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1009)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2097)
+Completed 200 OK in 15ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 2446)
+
+
+Started POST "/posts" for ::1 at 2024-02-27 23:45:37 +0900
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"2回目の投稿", "content"=>"2回目の投稿"}, "commit"=>"投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:13:in `create'
+  [1m[36mPost Create (2.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "2回目の投稿"], ["content", "2回目の投稿"], ["created_at", "2024-02-27 14:45:37.812780"], ["updated_at", "2024-02-27 14:45:37.812780"]]
+  ↳ app/controllers/posts_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:13:in `create'
+Redirected to http://[::1]:3000/posts
+Completed 302 Found in 12ms (ActiveRecord: 4.2ms | Allocations: 1931)
+
+
+Started GET "/posts" for ::1 at 2024-02-27 23:45:37 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 444)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 1728)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.1ms | Allocations: 2047)
+
+
+Started GET "/posts" for ::1 at 2024-02-28 08:37:13 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1217)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1311)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.0ms | Allocations: 2858)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>
+    Hello Ruby on Rails!
+</h1>
+
+<div class="button-container">
+    <%= link_to "新しい投稿", new_post_path, class "link-button" %>
+</div>
+
+<ul>
+    <% @posts.each do |post| %>
+        <li>
+            <h2><%= post.title %></h2>
+            <p><%= post.content %></p>
+            <span><small><%= post.created_at %></small></span>
+        </li>
+    <% end %>
+</ul>
+):
+1:    <h1>
+2:        Hello Ruby on Rails!
+3:    </h1>
+4:    
+5:    <div class="button-container">
+6:        <%= link_to "新しい投稿", new_post_path, class "link-button" %>
+7:    </div>
+8:    
+9:    <ul>
+10:        <% @posts.each do |post| %>
+11:            <li>
+12:                <h2><%= post.title %></h2>
+13:                <p><%= post.content %></p>
+14:                <span><small><%= post.created_at %></small></span>
+15:            </li>
+16:        <% end %>
+17:    </ul>
+  
+app/views/posts/index.html.erb:6: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+Started GET "/" for ::1 at 2024-02-28 08:39:06 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.8ms | Allocations: 376)
+Completed 200 OK in 381ms (Views: 73.9ms | ActiveRecord: 0.0ms | Allocations: 4864)
+
+
+Started GET "/posts" for ::1 at 2024-02-28 08:39:11 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 61.3ms | Allocations: 10360)
+  Rendered layout layouts/application.html.erb (Duration: 1012.6ms | Allocations: 50545)
+Completed 200 OK in 1307ms (Views: 1015.1ms | ActiveRecord: 5.1ms | Allocations: 57720)
+
+
+Started GET "/posts/new" for ::1 at 2024-02-28 08:39:32 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 185.4ms | Allocations: 9162)
+  Rendered layout layouts/application.html.erb (Duration: 191.4ms | Allocations: 10250)
+Completed 200 OK in 220ms (Views: 193.7ms | ActiveRecord: 0.0ms | Allocations: 10630)
+
+
+Started GET "/posts/new" for ::1 at 2024-02-28 08:41:49 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1047)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 15869)
+Completed 200 OK in 36ms (Views: 27.7ms | ActiveRecord: 2.7ms | Allocations: 20202)
+
+
+Started GET "/posts/" for ::1 at 2024-02-28 08:41:52 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2055)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 2432)
+
+
+Started GET "/posts/edit" for ::1 at 2024-02-28 08:43:20 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/edit"):
+  
+Started GET "/posts/1/edit" for ::1 at 2024-02-28 08:43:42 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1083)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 15900)
+Completed 200 OK in 79ms (Views: 29.1ms | ActiveRecord: 6.5ms | Allocations: 22906)
+
+
+Started GET "/posts/" for ::1 at 2024-02-28 08:44:08 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 755)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 2016)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.2ms | Allocations: 2355)
+
+
+Started GET "/posts/1/edit" for ::1 at 2024-02-28 08:45:36 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1051)
+  Rendered layout layouts/application.html.erb (Duration: 43.7ms | Allocations: 15687)
+Completed 200 OK in 95ms (Views: 56.2ms | ActiveRecord: 12.4ms | Allocations: 20912)
+
+
+Started PATCH "/posts/1" for ::1 at 2024-02-28 08:45:47 +0900
+Processing by PostsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"test update", "content"=>"test update"}, "commit"=>"更新", "id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:26:in `update'
+  [1m[36mPost Update (19.4ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "test update"], ["content", "test update"], ["updated_at", "2024-02-27 23:45:48.086819"], ["id", 1]]
+  ↳ app/controllers/posts_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:26:in `update'
+Redirected to http://[::1]:3000/posts
+Completed 302 Found in 60ms (ActiveRecord: 24.5ms | Allocations: 3552)
+
+
+Started GET "/posts" for ::1 at 2024-02-28 08:45:48 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 751)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 2027)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.2ms | Allocations: 2409)
+
+
+Started GET "/posts/2/edit" for ::1 at 2024-02-28 08:45:56 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 695)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 1792)
+Completed 200 OK in 19ms (Views: 11.8ms | ActiveRecord: 0.1ms | Allocations: 2424)
+
+
+Started PATCH "/posts/2" for ::1 at 2024-02-28 08:46:13 +0900
+Processing by PostsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"2回目の投稿を更新", "content"=>"2回目の投稿を更新"}, "commit"=>"更新", "id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:26:in `update'
+  [1m[36mPost Update (2.2ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "2回目の投稿を更新"], ["content", "2回目の投稿を更新"], ["updated_at", "2024-02-27 23:46:13.336702"], ["id", 2]]
+  ↳ app/controllers/posts_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:26:in `update'
+Redirected to http://[::1]:3000/posts
+Completed 302 Found in 16ms (ActiveRecord: 2.6ms | Allocations: 2224)
+
+
+Started GET "/posts" for ::1 at 2024-02-28 08:46:13 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 481)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 1748)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 0.1ms | Allocations: 2030)
+
+
+Started GET "/posts/new" for ::1 at 2024-02-28 08:46:14 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 928)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2015)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 2365)
+
+
+Started GET "/posts/" for ::1 at 2024-02-28 08:48:44 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 3624)
+  Rendered layout layouts/application.html.erb (Duration: 37.2ms | Allocations: 18627)
+Completed 200 OK in 50ms (Views: 38.8ms | ActiveRecord: 4.2ms | Allocations: 20161)
+
+
+Started GET "/posts/" for ::1 at 2024-02-28 08:51:33 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1247)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1341)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 2892)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>
+    Hello Ruby on Rails!
+</h1>
+
+<div class="button-container">
+    <%= link_to "新しい投稿", new_post_path, class: "link-button" %>
+</div>
+
+<ul>
+    <% @posts.each do |post| %>
+        <li>
+            <h2><%= post.title %></h2>
+            <p><%= post.content %></p>
+            <span><small><%= post.created_at %></small></span>
+            <div class="edit-delete-wrapper">
+                <%= button_to "削除", post_path(post), method: :delete, class "link-delete-button"  %>
+            </div>
+        </li>
+    <% end %>
+</ul>
+):
+1:    <h1>
+2:        Hello Ruby on Rails!
+3:    </h1>
+4:    
+5:    <div class="button-container">
+6:        <%= link_to "新しい投稿", new_post_path, class: "link-button" %>
+7:    </div>
+8:    
+9:    <ul>
+10:        <% @posts.each do |post| %>
+11:            <li>
+12:                <h2><%= post.title %></h2>
+13:                <p><%= post.content %></p>
+14:                <span><small><%= post.created_at %></small></span>
+15:                <div class="edit-delete-wrapper">
+16:                    <%= button_to "削除", post_path(post), method: :delete, class "link-delete-button"  %>
+17:                </div>
+18:            </li>
+19:        <% end %>
+20:    </ul>
+  
+app/views/posts/index.html.erb:16: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+Started GET "/posts/" for ::1 at 2024-02-28 08:53:00 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 4102)
+  Rendered layout layouts/application.html.erb (Duration: 72.0ms | Allocations: 18924)
+Completed 200 OK in 118ms (Views: 79.6ms | ActiveRecord: 5.9ms | Allocations: 20456)
+
+
+Started DELETE "/posts/2" for ::1 at 2024-02-28 08:53:37 +0900
+  
+ActionController::RoutingError (No route matches [DELETE] "/posts/2"):
+  
+Started GET "/posts/" for ::1 at 2024-02-28 08:53:37 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 894)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 1996)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.1ms | Allocations: 2274)
+
+
+Started GET "/posts/" for ::1 at 2024-02-28 08:54:18 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 4095)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 18970)
+Completed 200 OK in 38ms (Views: 31.1ms | ActiveRecord: 2.6ms | Allocations: 20501)
+
+
+Started DELETE "/posts/1" for ::1 at 2024-02-28 08:54:20 +0900
+Processing by PostsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:34:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:35:in `destroy'
+  [1m[36mPost Destroy (2.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/posts_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:35:in `destroy'
+Redirected to http://[::1]:3000/posts
+Completed 302 Found in 13ms (ActiveRecord: 4.7ms | Allocations: 2572)
+
+
+Started GET "/posts" for ::1 at 2024-02-28 08:54:20 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 755)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 1842)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.1ms | Allocations: 2161)
+
+
+Started GET "/posts" for ::1 at 2024-02-28 08:56:26 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 16.6ms | Allocations: 4008)
+  Rendered layout layouts/application.html.erb (Duration: 66.8ms | Allocations: 18673)
+Completed 200 OK in 118ms (Views: 70.2ms | ActiveRecord: 7.3ms | Allocations: 20207)
+
+
+Started GET "/posts/2/edit" for ::1 at 2024-02-28 08:56:28 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1016)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2099)
+Completed 200 OK in 14ms (Views: 6.8ms | ActiveRecord: 0.2ms | Allocations: 3406)
+
+
+Started GET "/posts/2/edit" for ::1 at 2024-02-28 08:56:28 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 691)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 1774)
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 2393)
+
+
+Started PATCH "/posts/2" for ::1 at 2024-02-28 08:56:31 +0900
+Processing by PostsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"2回目の投稿を更新", "content"=>"2回目の投稿を更新"}, "commit"=>"更新", "id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `update'
+Redirected to http://[::1]:3000/posts
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 965)
+
+
+Started GET "/posts" for ::1 at 2024-02-28 08:56:31 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 772)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1859)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 2178)
+
+
+Started GET "/posts" for ::1 at 2024-02-28 08:58:57 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 3951)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 18775)
+Completed 200 OK in 45ms (Views: 36.6ms | ActiveRecord: 3.2ms | Allocations: 20376)
+
+
+Started GET "/posts/2/edit" for ::1 at 2024-02-28 08:58:58 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 998)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2081)
+Completed 200 OK in 13ms (Views: 7.3ms | ActiveRecord: 0.3ms | Allocations: 3402)
+
+
+Started PATCH "/posts/2" for ::1 at 2024-02-28 08:59:09 +0900
+Processing by PostsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"3回目の投稿を更新", "content"=>"3回目の投稿を更新"}, "commit"=>"更新", "id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `set_post'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:26:in `update'
+  [1m[36mPost Update (3.9ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "3回目の投稿を更新"], ["content", "3回目の投稿を更新"], ["updated_at", "2024-02-27 23:59:09.379679"], ["id", 2]]
+  ↳ app/controllers/posts_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:26:in `update'
+Redirected to http://[::1]:3000/posts
+Completed 302 Found in 33ms (ActiveRecord: 8.7ms | Allocations: 2364)
+
+
+Started GET "/posts" for ::1 at 2024-02-28 08:59:09 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 769)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 1856)
+Completed 200 OK in 27ms (Views: 21.8ms | ActiveRecord: 0.2ms | Allocations: 2177)
+
+
